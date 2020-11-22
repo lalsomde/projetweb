@@ -8,7 +8,7 @@
   <meta charset="UTF-8">
 
 
-  <title>Membre</title>
+  <title>Employés</title>
   
   
   
@@ -20,9 +20,9 @@
 
 </head>
 
-<body translate="no" >
+<body translate="yes" >
   <div class="login-box">
-  <h2>Inscription Membre</h2>
+  <h2>Inscription Emplyé</h2>
   <form>
     <div class="user-box">
       <input type="text"  id= "username" name="" >
@@ -33,20 +33,19 @@
       <label>Prénom</label>
     </div>
 	<div class="user-box">
-      <input type="date" id="" value="">
+	<input type="date" id="" value="">
       <label>Date de Naissance</label>
     </div>
 	<div class="user-box">
-     <input type="email" id="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" name ="" >
-
+      <input type="email" id="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" name ="" >
       <label>Email</label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      <input type="text"  id= "" name="" >
       <label>Téléphone</label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name="" >
+      <input type="text"  id= "" name="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
       <label>Numéro Rue </label>
     </div>
 	<div class="user-box">
@@ -345,25 +344,17 @@
 
 </select>
     </div><br><br>
-	<div class="user-box">
-      <input type="text"  id= "" name="" ><br><br>
-      <label>Numéro de Passeport</label><br><br>
-    </div>
-	<div class="user-box">
-	   <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-	  <input  name=""  value="choisir" type="file" size="20" />
-    
- </a>   
-   </div>
+		<div class="user-box">
+      <input type="text"  id= "" name=""  style = "display:none">
+      <label>Rôle</label><br>
+	<select name="">
+	<option value="Guide" selected="selected">Guide</option>
+	<option value="Administrateur">Administrateur</option>
+	<option value="Employé">Employé</option>
+	</select>	
+    </div> <br><br>
     <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+     
 	  <input type="submit" value="valider" onsubmit="valider()"></input >
       
     </a>

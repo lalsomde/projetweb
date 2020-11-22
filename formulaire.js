@@ -4,7 +4,8 @@
   if (document.location.search.match(/type=embed/gi)) {
     window.parent.postMessage("resize", "*");
   }
-/*
+
+
 var username = document.getElementById("username");
 	var passw = document.getElementById("password");
 	var email1 = document.getElementById("Email");
@@ -43,5 +44,5 @@ var username = document.getElementById("username");
 	
 	 
   
-  }*/
+  }
   /*|| !email1.value || !email2.value */
