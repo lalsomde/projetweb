@@ -7,24 +7,36 @@
 
 function valider()                                    
       { 
-          var name = document.forms["RegForm"]["Nom"];               
-          var email = document.forms["RegForm"]["Email"];    
-          var phone = document.forms["RegForm"]["Téléphone"];  
-          var what =  document.forms["RegForm"]["Sujet"];  
-          var password = document.forms["RegForm"]["Mot de passe"];  
-          var address = document.forms["RegForm"]["Adresse"];  
-          var comment = document.forms["RegForm"]["Commentaire"];  
+          var name = document.forms["formulaire"]["nom"];               
+          var email = document.forms["formulaire"]["Email"];    
+          var telephone = document.forms["formulaire"]["telephone"];  
+          var prenom =  document.forms["formulaire"]["prenom"];  
+          var password = document.forms["formulaire"]["passeword"];  
+          var pays = document.forms["formulaire"]["pays"];  
+         var numPorte = document.forms["formulaire"]["numPorte"]; 
+         var cPostal= document.forms["formulaire"]["cPostal"]; 
+         var province = document.forms["formulaire"]["province"]; 
+         var dateNaissance = document.forms["formulaire"]["dateNaissance"]; 
+          var numRue = document.forms["formulaire"]["numRue"]; 
+        var ville = document.forms["formulaire"]["ville"];  
+        var numPasseport = document.forms["formulaire"]["numPasseport"];  
 
           if (name.value == "")                                  
           { 
               alert("Mettez votre nom."); 
               name.focus(); 
               return false; 
-          }    
-          if (address.value == "")                               
+          }  
+        if (prenom.value == "")                                  
           { 
-              alert("Mettez votre adresse."); 
-              address.focus(); 
+              alert("Mettez votre prenom."); 
+              prenom.focus(); 
+              return false; 
+          }    
+          if (pays.value == "")                               
+          { 
+              alert("Mettez  le nom de votre pays."); 
+              pays.focus(); 
               return false; 
           }        
           if (email.value == "")                                   
@@ -45,10 +57,16 @@ function valider()
               email.focus(); 
               return false; 
           }    
-          if (phone.value == "")                           
+          if (telephone.value == "")                           
           { 
               alert("Mettez votre numéro de téléphone."); 
               phone.focus(); 
+              return false; 
+          } 
+          if (telephone.value< 10 || telephone.value > 10 )                 
+          { 
+             alert("Mettez un numero de télephome valide."); 
+              email.focus(); 
               return false; 
           }    
           if (password.value == "")                        
@@ -57,17 +75,37 @@ function valider()
               password.focus(); 
               return false; 
           }    
-          if (what.selectedIndex < 1)                  
+          if (cPostal.value == "")                        
           { 
-              alert("Mettez votre cours."); 
-              what.focus(); 
+              alert("Saisissez un code Postal valide"); 
+              cPostal.focus(); 
               return false; 
           } 
-          if (comment.value == "")                  
+          if (numPasseport.value == "")                        
           { 
-             alert("Écrivez un commentaire."); 
-             comment.focus(); 
-             return false; 
+              alert("Saisissez votre numéro de passeport "); 
+              numPasseport.focus(); 
+              return false; 
+          }  
+          if (numRue.value == "")                        
+          { 
+              alert("Saisissez votre numéro de rue"); 
+              numRue.focus(); 
+              return false; 
+          }  
+          if (numPorte.value == "")                        
+          { 
+              alert("Saisissez numero de porte valide "); 
+              numPorte.focus(); 
+              return false; 
+          }  
+          if (dateNaissance.value == "")                        
+          { 
+              alert("choisir date de naissance"); 
+              dateNaissance.focus(); 
+              return false; 
+          }  
+         turn false; 
           } 
           return true; 
       }
