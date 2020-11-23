@@ -23,46 +23,46 @@
 <body translate="no" >
   <div class="login-box">
   <h2>Inscription Membre</h2>
-  <form>
+  <form onsubmit="return W3docs()">
     <div class="user-box">
-      <input type="text"  id= "username" name="" >
+      <input type="text"  id= "username" name="username" >
       <label>Nom</label>
     </div>
     <div class="user-box">
-      <input type="text" name=""  id= "password"  name= "">
+      <input type="text" name=""  id= "password"  name= "password">
       <label>Prénom</label>
     </div>
 	<div class="user-box">
-      <input type="date" id="" value="">
+      <input type="date" id="dateNaissance" value="">
       <label>Date de Naissance</label>
     </div>
 	<div class="user-box">
-     <input type="email" id="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" name ="" >
+     <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" size="30" name ="email" >
 
       <label>Email</label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name="" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      <input type="text"  id= "telephone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
       <label>Téléphone</label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name="" >
+      <input type="text"  id= "numRue" name="numRue" >
       <label>Numéro Rue </label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name="" >
+      <input type="text"  id= "numPorte" name="numPorte" >
       <label>Numéro de  Porte </label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name="" >
+      <input type="text"  id= "ville" name="ville" >
       <label>Ville</label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name="" >
+      <input type="text"  id= "cPostal" name="cPostal" >
       <label>Code Postal</label>
     </div>
 	<div class="user-box">
-      <input type="text"  id= "" name=""  style = "display:none">
+      <input type="text"  id= "province" name="province"  style = "display:none">
       <label>province</label><br>
 	<select name="">
 	<option value="QC" selected="selected">Quebec</option>
@@ -83,7 +83,7 @@
     </div> <br><br>
 	
 	<div class="user-box">
-	   <input type="text"  id= "" name="" style= "display:none" >
+	   <input type="text"  id= "pays" name="pays" style= "display:none" >
 	   
      <label>Pays</label><br>
 	 
@@ -346,7 +346,7 @@
 </select>
     </div><br><br>
 	<div class="user-box">
-      <input type="text"  id= "" name="" ><br><br>
+      <input type="text"  id= "numPasseport" name="numPasseport" ><br><br>
       <label>Numéro de Passeport</label><br><br>
     </div>
 	<div class="user-box">
@@ -355,7 +355,7 @@
       <span></span>
       <span></span>
       <span></span>
-	  <input  name=""  value="choisir" type="file" size="20" />
+	  <input  name="image"  value="choisir" type="file" size="20" />
     
  </a>   
    </div>
@@ -373,42 +373,3 @@
 </body>
 
 </html>
-<script type="text/javascript" charset="UTF-8">
- 
- 
-	function valider() {
-
-  if( !username.value|| !passw.value ) {
-  
-    alert("vous devez remplire la formulaire avant de l'envoyer !");
-    window.location.reload(true);
-    
-	
-  }
-   var usernam = document.getElementById("username");
-	var passw = document.getElementById("password");
-	var email1 = document.getElementById("Email");
-	var email2 = document.getElementById("ConfirmationEmail");
-	var MessageErreur = '';
-	var chargeSelect = document.getElementById("menu"); 
-   
-	if (!username.value) {
-		MessageErreur = MessageErreur+"<br>Le nom d'utilisateur est obligatoire!";
-	}
-	if(!passw.value) {
-		MessageErreur = MessageErreur+"<br> le mot de passe  est obligatoire!";
-	}
-	if(!email1.value) {
-		MessageErreur = MessageErreur+"<br> une adresse email est obligatoire!";
-	}
-	if (!email2.value) {
-		MessageErreur =  MessageErreur+"<br>une confirmation d'adresse email est obligatoire!";
-	}
-	
-	if (MessageErreur) {
-		e.preventDefault();
-		document.getElementById("MessageErreur").innerHTML = MessageErreur;
-		return true;
-	}
-  
-  </script>
